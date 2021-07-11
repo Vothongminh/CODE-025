@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+        />
+        <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Frontendfunn - Bootstrap 5 Admin Dashboard Template</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"> </script>
+    </head>
+    <body>
+        <!-- top navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#sidebar"
+                aria-controls="offcanvasExample"
+                >
+                <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+                </button>
+                <a
+                class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold"
+                href="#"
+                >SMART GARDEN</a
+                >
+                <div class="collapse navbar-collapse" id="topNavBar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- top navigation bar -->
+        <!-- offcanvas -->
+        <div
+        class="offcanvas offcanvas-start sidebar-nav bg-dark"
+        tabindex="-1"
+        id="sidebar"
+        >
+            <div class="offcanvas-body p-0">
+                <nav class="navbar-dark">
+                    <ul class="navbar-nav">
+                        <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3">
+                            MEMBERS:
+                        </div>
+                        </li>
+                        <li>
+                        <a href="#" class="nav-link px-3 active">
+                            <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                            <span>MINH - KHOA - UYEN</span>
+                        </a>
+                        </li>
+                        <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
+                        <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                            CONTROL
+                        </div>
+                        </li>
+                        <li>
+                        <a
+                            class="nav-link px-3 sidebar-link"
+                            data-bs-toggle="collapse"
+                            href="#layouts"
+                        >
+                            <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                            <span>Auto</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                            <span>Manual</span>
+                        </a>
+                        </li>
+                        <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
+                        <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                            Data
+                        </div>
+                        </li>
+                        <li>
+                        <a href="#" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-graph-up"></i></span>
+                            <span>Charts</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-table"></i></span>
+                            <span>Tables</span>
+                        </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- offcanvas -->
+        <!-- Main -->
+        <main class="mt-5 pt-3">
+            <!-- Control -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Control</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- checkbox -->
+            <form action="" id="form">
+                <div class="appliances">
+                    <div class="appliance">
+                        <input type="checkbox" name="L" id="a" value="den">
+                        <label for="a">
+                            <i class="l"></i>
+                            <strong>Light</strong>
+                            <span data-o=" " data-c=" "></span>
+                            <small></small>
+                        </label>
+                    </div>
+
+                    <div class="appliance">
+                        <input type="checkbox" name="P" id="b" value="bom">
+                        <label for="b">
+                            <i class="r"></i>
+                            <strong>Pump</strong>
+                            <span data-o=" " data-c=" "></span>
+                            <small></small>
+                        </label>
+                    </div>
+
+                    <div class="appliance">
+                        <input type="checkbox" name="F" id="c" value="quat">
+                        <label for="c">
+                            <i class="a"></i>
+                            <strong>Fan</strong>
+                            <span data-o=" " data-c=" "></span>
+                            <small></small>
+                        </label>
+                    </div>
+
+                    <div class="appliance">
+                        <input type="checkbox" name="A" id="d" value="tudong">
+                        <label for="d">
+                            <i class="f"></i>
+                            <strong>Auto</strong>
+                            <span data-o=" " data-c=""></span>
+                            <small></small>
+                        </label>
+                    </div>
+                    <!-- <button type="submit">OK</button> -->
+                </div>
+            </form>
+            <!-- chart -->
+            <div class="wrapper border border-3 rounded border-primary">
+                <canvas id="myChart"></canvas>
+            </div>
+            <script>
+                var label = [];
+                var data1 = [];
+                var data2 = [];
+                
+                const chartdata = {
+                labels: label,
+                    datasets: [{
+                        label: 'Temp',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: data1
+                    },
+                    {
+                        label: 'Humd',
+                        backgroundColor: 'rgb(99, 255, 132)',
+                        borderColor: 'rgb(99, 255, 132)',
+                        data: data2
+                    }
+                    ]
+                };
+                const config = {
+                    type: 'line',
+                    data: chartdata,
+                    options: {
+                        animation:false
+                    }
+                };
+                var myChart = new Chart(
+                    document.getElementById('myChart'),
+                    config
+                );
+
+                // load data tu database
+                $(document).ready(function(){
+                    updateChart();
+                });
+                setInterval(updateChart,2000);
+                function updateChart(){
+                    // gui request xuong database de lay data
+                    $.post('readDataChart.php',function(data){
+                        var label = [];
+                        var data1 = [];
+                        var data2 = [];
+                        for(var i in data){
+                            label.push(data[i].Num);
+                            data1.push(data[i].Temp);
+                            data2.push(data[i].Humd);
+                        }
+                        // console.log(data1);
+                        myChart.data.labels = label;
+                        myChart.data.datasets[0].data = data1;
+                        myChart.data.datasets[1].data = data2;
+                        myChart.update();
+                    })
+                }
+            </script> 
+            <!-- Table -->
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <span><i class="bi bi-table me-2"></i></span> Data Table
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table
+                                    id="example"
+                                    class="table table-striped"
+                                    style="width: 100%"
+                                >
+                                    <thead>
+                                    <tr>
+                                        <th>Temperature </th>
+                                        <th>Humidity(%) </th>
+                                        <th>Soil moisture(logic)</th>
+                                        <th>Status</th>
+                                        <th>Time (GMT+7)</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td id = "td1_1"></td>
+                                            <td id = "td1_2"></td>
+                                            <td id = "td1_3"></td>
+                                            <td id = "td1_4"></td>
+                                            <td id = "td1_5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td id = "td2_1"></td>
+                                            <td id = "td2_2"></td>
+                                            <td id = "td2_3"></td>
+                                            <td id = "td2_4"></td>
+                                            <td id = "td2_5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td id = "td3_1"></td>
+                                            <td id = "td3_2"></td>
+                                            <td id = "td3_3"></td>
+                                            <td id = "td3_4"></td>
+                                            <td id = "td3_5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td id = "td4_1"></td>
+                                            <td id = "td4_2"></td>
+                                            <td id = "td4_3"></td>
+                                            <td id = "td4_4"></td>
+                                            <td id = "td4_5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td id = "td5_1"></td>
+                                            <td id = "td5_2"></td>
+                                            <td id = "td5_3"></td>
+                                            <td id = "td5_4"></td>
+                                            <td id = "td5_5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td id = "td6_1"></td>
+                                            <td id = "td6_2"></td>
+                                            <td id = "td6_3"></td>
+                                            <td id = "td6_4"></td>
+                                            <td id = "td6_5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td id = "td7_1"></td>
+                                            <td id = "td7_2"></td>
+                                            <td id = "td7_3"></td>
+                                            <td id = "td7_4"></td>
+                                            <td id = "td7_5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td id = "td8_1"></td>
+                                            <td id = "td8_2"></td>
+                                            <td id = "td8_3"></td>
+                                            <td id = "td8_4"></td>
+                                            <td id = "td8_5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td id = "td9_1"></td>
+                                            <td id = "td9_2"></td>
+                                            <td id = "td9_3"></td>
+                                            <td id = "td9_4"></td>
+                                            <td id = "td9_5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td id = "td10_1"></td>
+                                            <td id = "td10_2"></td>
+                                            <td id = "td10_3"></td>
+                                            <td id = "td10_4"></td>
+                                            <td id = "td10_5"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- scrips -->
+            <script>
+                $(document).ready(function(){
+                    //code update form
+                    //code update table
+                    updateTable();
+                });
+                setInterval(updateTable,5000);
+                setInterval(updateCbx,100);
+                function updateCbx(){
+                    $.post("addData.php",$('#form').serialize());
+                }
+                function updateTable(){
+                    //yeu cau server call file.php
+                    $.post("getData.php",
+                    function(data){
+                        // $.post("addData.php",$('#form').serialize());
+                        var td1_1 = data[0].Temp;
+                        var td1_2 = data[0].Humd;
+                        var td1_3 = data[0].Soil;
+                        var td1_4 = data[0].Status;
+                        var td1_5 = data[0].Time;
+                        
+                        var td2_1 = data[1].Temp;
+                        var td2_2 = data[1].Humd;
+                        var td2_3 = data[1].Soil;
+                        var td2_4 = data[1].Status;
+                        var td2_5 = data[1].Time;
+
+                        var td3_1 = data[2].Temp;
+                        var td3_2 = data[2].Humd;
+                        var td3_3 = data[2].Soil;
+                        var td3_4 = data[2].Status;
+                        var td3_5 = data[2].Time;
+						
+						var td4_1 = data[3].Temp;
+                        var td4_2 = data[3].Humd;
+                        var td4_3 = data[3].Soil;
+                        var td4_4 = data[3].Status;
+                        var td4_5 = data[3].Time;
+
+                        var td5_1 = data[4].Temp;
+                        var td5_2 = data[4].Humd;
+                        var td5_3 = data[4].Soil;
+                        var td5_4 = data[4].Status;
+                        var td5_5 = data[4].Time;
+
+                        var td6_1 = data[5].Temp;
+                        var td6_2 = data[5].Humd;
+                        var td6_3 = data[5].Soil;
+                        var td6_4 = data[5].Status;
+                        var td6_5 = data[5].Time;
+
+                        var td7_1 = data[6].Temp;
+                        var td7_2 = data[6].Humd;
+                        var td7_3 = data[6].Soil;
+                        var td7_4 = data[6].Status;
+                        var td7_5 = data[6].Time;
+
+                        var td8_1 = data[7].Temp;
+                        var td8_2 = data[7].Humd;
+                        var td8_3 = data[7].Soil;
+                        var td8_4 = data[7].Status;
+                        var td8_5 = data[7].Time;
+
+                        var td9_1 = data[8].Temp;
+                        var td9_2 = data[8].Humd;
+                        var td9_3 = data[8].Soil;
+                        var td9_4 = data[8].Status;
+                        var td9_5 = data[8].Time;
+
+                        var td10_1 = data[9].Temp;
+                        var td10_2 = data[9].Humd;
+                        var td10_3 = data[9].Soil;
+                        var td10_4 = data[9].Status;
+                        var td10_5 = data[9].Time;
+
+                        document.getElementById("td1_1").innerHTML = td1_1;
+                        document.getElementById("td1_2").innerHTML = td1_2;
+                        document.getElementById("td1_3").innerHTML = td1_3;
+                        document.getElementById("td1_4").innerHTML = td1_4;
+                        document.getElementById("td1_5").innerHTML = td1_5;
+
+                        document.getElementById("td2_1").innerHTML = td2_1;
+                        document.getElementById("td2_2").innerHTML = td2_2;
+                        document.getElementById("td2_3").innerHTML = td2_3;
+                        document.getElementById("td2_4").innerHTML = td2_4;
+                        document.getElementById("td2_5").innerHTML = td2_5;
+
+                        document.getElementById("td3_1").innerHTML = td3_1;
+                        document.getElementById("td3_2").innerHTML = td3_2;
+                        document.getElementById("td3_3").innerHTML = td3_3;
+                        document.getElementById("td3_4").innerHTML = td3_4;
+                        document.getElementById("td3_5").innerHTML = td3_5;
+
+                        document.getElementById("td4_1").innerHTML = td4_1;
+                        document.getElementById("td4_2").innerHTML = td4_2;
+                        document.getElementById("td4_3").innerHTML = td4_3;
+                        document.getElementById("td4_4").innerHTML = td4_4;
+                        document.getElementById("td4_5").innerHTML = td4_5;
+
+                        document.getElementById("td5_1").innerHTML = td5_1;
+                        document.getElementById("td5_2").innerHTML = td5_2;
+                        document.getElementById("td5_3").innerHTML = td5_3;
+                        document.getElementById("td5_4").innerHTML = td5_4;
+                        document.getElementById("td5_5").innerHTML = td5_5;
+
+                        document.getElementById("td6_1").innerHTML = td6_1;
+                        document.getElementById("td6_2").innerHTML = td6_2;
+                        document.getElementById("td6_3").innerHTML = td6_3;
+                        document.getElementById("td6_4").innerHTML = td6_4;
+                        document.getElementById("td6_5").innerHTML = td6_5;
+
+                        document.getElementById("td7_1").innerHTML = td7_1;
+                        document.getElementById("td7_2").innerHTML = td7_2;
+                        document.getElementById("td7_3").innerHTML = td7_3;
+                        document.getElementById("td7_4").innerHTML = td7_4;
+                        document.getElementById("td7_5").innerHTML = td7_5;
+
+                        document.getElementById("td8_1").innerHTML = td8_1;
+                        document.getElementById("td8_2").innerHTML = td8_2;
+                        document.getElementById("td8_3").innerHTML = td8_3;
+                        document.getElementById("td8_4").innerHTML = td8_4;
+                        document.getElementById("td8_5").innerHTML = td8_5;
+
+                        document.getElementById("td9_1").innerHTML = td9_1;
+                        document.getElementById("td9_2").innerHTML = td9_2;
+                        document.getElementById("td9_3").innerHTML = td9_3;
+                        document.getElementById("td9_4").innerHTML = td9_4;
+                        document.getElementById("td9_5").innerHTML = td9_5;
+
+                        document.getElementById("td10_1").innerHTML = td10_1;
+                        document.getElementById("td10_2").innerHTML = td10_2;
+                        document.getElementById("td10_3").innerHTML = td10_3;
+                        document.getElementById("td10_4").innerHTML = td10_4;
+                        document.getElementById("td10_5").innerHTML = td10_5;
+                    })
+                }
+            </script>
+        </main>
+    </body>
+</html>
